@@ -52,7 +52,7 @@ The milestone 3 version of our interactive text mining environment can be found 
 
 ## Frontend (WP5 & WP6)
 
-The Milestone 3 Prototype (v0.1.0) of the InTaVia web client (frontend) is available as a permanent release: [https://github.com/InTaVia/web/releases/tag/v0.1.0](https://github.com/InTaVia/web/releases/tag/v0.1.0).
+The Milestone 4 Prototype (v0.2.0) of the InTaVia web client (frontend) is available as a permanent release: [https://github.com/InTaVia/web/releases/tag/v0.2.0](https://github.com/InTaVia/web/releases/tag/v0.2.0).
 
 The current prototype is available online: [https://intavia.acdh-dev.oeaw.ac.at/](https://intavia.acdh-dev.oeaw.ac.at/).
 
@@ -60,7 +60,7 @@ The data shown in the application are automatically generated mock data includin
 
 The prototype implements aspects of the three top-level components (Data Curation Lab, DC lab; Visual Analytics Studio, VA studio; Visual Storytelling Suite, ST suite) in a single application on separate pages. The components implemented are:
 
-### DC lab
+### Data Curation Lab
 
 - Keyword search and list view of search results: [https://intavia.acdh-dev.oeaw.ac.at/search](https://intavia.acdh-dev.oeaw.ac.at/search)
 - Detail view of entities: e.g., [https://intavia.acdh-dev.oeaw.ac.at/person/876859d3-dee8-468d-9c61-a29e97ef478a](https://intavia.acdh-dev.oeaw.ac.at/person/876859d3-dee8-468d-9c61-a29e97ef478a)
@@ -68,7 +68,7 @@ The prototype implements aspects of the three top-level components (Data Curatio
 - Shared global Redux store that can be accessed by all components 
 - Shared frontend network module using RTKQuery (handles deduplication of requests to data endpoints and caching of results)
 
-### VA studio
+### Visaul Analytics Studio
 
 Data views:
 - Timeline view showing a set of person entities with selected life events (e.g. birth, death, lived): [https://intavia.acdh-dev.oeaw.ac.at/timeline](https://intavia.acdh-dev.oeaw.ac.at/timeline)
@@ -82,7 +82,7 @@ Coordinated views:
 Visual querying:
 - A workspace to visually query for persons based on attribute constraints including name and date of birth and death: [https://intavia.acdh-dev.oeaw.ac.at/visual-querying](https://intavia.acdh-dev.oeaw.ac.at/visual-querying)
 
-### ST suite = ST creator + ST viewer
+### Storytelling Suite = Story Creator + Story Viewer
 
 - The ST creator implements an interactive user interface allowing to generate and import slide-based stories. The prototype can depict persons’ life-events on a map and provides annotation capabilities (i.e., images and text): [https://intavia.acdh-dev.oeaw.ac.at/storycreator](https://intavia.acdh-dev.oeaw.ac.at/storycreator) 
     - Stories Overview (create and delete stories)
