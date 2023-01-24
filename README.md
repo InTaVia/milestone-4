@@ -1,9 +1,10 @@
 # InTaVia Milestone-4
 
-InTaVia Milestone 4 Documentation - Basic Operational System 
+InTaVia Milestone 4 Documentation - Operational System 
 
-Individual components of the system operational with connectivity partially established and ready for evaluation by WP7.
+System fully integrated, all main functionality implemented ready for testing by WP7.
 
+# `Please Update Below`
 
 ## Backend (WP2 & 3)
 
