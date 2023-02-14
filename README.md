@@ -70,6 +70,7 @@ The prototype implements functionalities used across the three top-level compone
 ### Data aquisition
 - Keyword search and list view of search results: [https://intavia.acdh-dev.oeaw.ac.at/search](https://intavia.acdh-dev.oeaw.ac.at/search)
 - visual querying: A workspace to visually query for persons based on attribute constraints including name and date of birth and death: [https://intavia.acdh-dev.oeaw.ac.at/visual-querying](https://intavia.acdh-dev.oeaw.ac.at/visual-querying)
+- local data import
 
 ### data curation/editing
 - Basic editing capability of person entities (name, description, event types & dates) - click edit on the detail view page.
@@ -94,7 +95,11 @@ The prototype implements functionalities used across the three top-level compone
 
 ### Story Creator
 
+- story script posting
+
+
 ### Story Viewer
+- post endpoint
 
 ### Storytelling Suite = Story Creator + Story Viewer
 
