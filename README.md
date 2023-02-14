@@ -111,7 +111,6 @@ The prototype implements functionalities used across the three top-level compone
 
 - The single event slides for the **"Life of Paolo Vergerio"** can be imported through the text editor using the content of json this [file](https://drive.google.com/file/d/1SSqNUxFXwucLqy2qHig4TAgyPweHNRJd/view?usp=sharing).
 
-- A clickable Adobe XD prototype of the ST viewer is available online: [ST Viewer Prototype](https://xd.adobe.com/view/b3de8bf3-1e43-434a-b06f-a99939eb2e6e-e68d)
-    - The prototype tells the story **"Life of Paolo Vergerio"** primarily based on a map/timeline visualization featuring annotations, images, quiz and timebased visualizations. 
-    - All screens including a selection of desktop views are available as PNG: [Screens ST viewer [.zip]](https://www.dropbox.com/sh/nvn626iro0yz1g7/AAD8mhhJHn79GT3mC-C-VNxaa?dl=1)
-    
+- An example of a story created using the Story Creator is available online: 
+[ST Viewer Example](https://intavia.fluxguide.com/fluxguide/public/content/fluxguide/exhibitions/1/system/app/dist/index.html)
+    - The example shows 4 Slides of the **"Albrecht Dürer's trip to the Netherlands"** created with the **Story Creator** based on a map visualizatrion featuring annotations and images.
