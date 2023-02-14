@@ -114,3 +114,5 @@ The prototype implements functionalities used across the three top-level compone
 - An example of a story created using the Story Creator is available online: 
 [ST Viewer Example](https://intavia.fluxguide.com/fluxguide/public/content/fluxguide/exhibitions/1/system/app/dist/index.html)
     - The example shows 4 Slides of the **"Albrecht Dürer's trip to the Netherlands"** created with the **Story Creator** based on a map visualizatrion featuring annotations and images.
+    
+    https://intavia.fluxguide.com/fluxguide/public/content/fluxguide/exhibitions/1/system/app/dist/index.html
