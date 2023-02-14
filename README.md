@@ -56,36 +56,50 @@ The Milestone 4 Prototype (v0.2.0) of the InTaVia web client (frontend) is avail
 
 The current prototype is available online: [https://intavia.acdh-dev.oeaw.ac.at/](https://intavia.acdh-dev.oeaw.ac.at/).
 
-The data shown in the application are automatically generated mock data including person and place entities. As soon as the connection between the backend and the frontend is established, the mock data will be replaced. **Note:** if below linked visualizations do not show results, please first do a search on the search page and then switch back to the visualization.
+*Data:* The connection between the backend and the frontend is now established replacing the initially used mock data. As additional data source, users can import their own local data into the application using a excel template.
 
-The prototype implements aspects of the three top-level components (Data Curation Lab, DC lab; Visual Analytics Studio, VA studio; Visual Storytelling Suite, ST suite) in a single application on separate pages. The components implemented are:
+The prototype implements functionalities used across the three top-level components (Data Curation Lab, DCL; Visual Analytics Studio, VA studio; Story Creator SC) in a single application. The functionalities implemented are:
 
-### Data Curation Lab
-
-- Keyword search and list view of search results: [https://intavia.acdh-dev.oeaw.ac.at/search](https://intavia.acdh-dev.oeaw.ac.at/search)
-- Detail view of entities: e.g., [https://intavia.acdh-dev.oeaw.ac.at/person/876859d3-dee8-468d-9c61-a29e97ef478a](https://intavia.acdh-dev.oeaw.ac.at/person/876859d3-dee8-468d-9c61-a29e97ef478a)
-- Basic editing capability of person entities (name, description, event types & dates) - click edit on the detail view page.
+### Global State
 - Shared global Redux store that can be accessed by all components 
+
+### Data model
+- API client
 - Shared frontend network module using RTKQuery (handles deduplication of requests to data endpoints and caching of results)
 
-### Visaul Analytics Studio
+### Data aquisition
+- Keyword search and list view of search results: [https://intavia.acdh-dev.oeaw.ac.at/search](https://intavia.acdh-dev.oeaw.ac.at/search)
+- visual querying: A workspace to visually query for persons based on attribute constraints including name and date of birth and death: [https://intavia.acdh-dev.oeaw.ac.at/visual-querying](https://intavia.acdh-dev.oeaw.ac.at/visual-querying)
 
-Data views:
+### data curation/editing
+- Basic editing capability of person entities (name, description, event types & dates) - click edit on the detail view page.
+
+### Data views:
+- Detail view of entities: e.g., [https://intavia.acdh-dev.oeaw.ac.at/person/876859d3-dee8-468d-9c61-a29e97ef478a](https://intavia.acdh-dev.oeaw.ac.at/person/876859d3-dee8-468d-9c61-a29e97ef478a)
+- detail view
+- Data Panel
+
+### Visualizations
 - Timeline view showing a set of person entities with selected life events (e.g. birth, death, lived): [https://intavia.acdh-dev.oeaw.ac.at/timeline](https://intavia.acdh-dev.oeaw.ac.at/timeline)
 - A geographic map view showing localized life events (i.e. birth and death) connected with a line: [https://intavia.acdh-dev.oeaw.ac.at/geomap](https://intavia.acdh-dev.oeaw.ac.at/geomap)
+- ego Network
+- Statistical
 
-Coordinated views:
+### Layouts and Coordinated views:
+- workspaces
 - Multiple views integrated on a single page are shown here: [https://intavia.acdh-dev.oeaw.ac.at/coordination](https://intavia.acdh-dev.oeaw.ac.at/coordination)
 - The example coordinates an entity list view, a timeline and a map showing persons and their life events via mouseover highlighting (red colour).
 - Currently, applies only to the map, a dropdown menu allows to filter the depicted events. If more than one event type is selected, the localized events are connected with lines in chronological order.
+- slides
 
-Visual querying:
-- A workspace to visually query for persons based on attribute constraints including name and date of birth and death: [https://intavia.acdh-dev.oeaw.ac.at/visual-querying](https://intavia.acdh-dev.oeaw.ac.at/visual-querying)
+### Story Creator
+
+### Story Viewer
 
 ### Storytelling Suite = Story Creator + Story Viewer
 
 - The ST creator implements an interactive user interface allowing to generate and import slide-based stories. The prototype can depict persons’ life-events on a map and provides annotation capabilities (i.e., images and text): [https://intavia.acdh-dev.oeaw.ac.at/storycreator](https://intavia.acdh-dev.oeaw.ac.at/storycreator) 
-    - Stories Overview (create and delete stories)
+    - Stories Overview (create and delete stories, edit story settings)
     - Story Flow (create, layout and delete slides per drag and drop)
     - Slide Editor (create, edit, layout and delete map, images and text per drag and drop)
     - Text Mode (edit or upload the whole story via textarea) (accessible through the clipboard icon in the top right corner)
