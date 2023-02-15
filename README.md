@@ -65,14 +65,11 @@ The prototype implements functionalities used across the three top-level compone
 - **Shared frontend network module** using RTKQuery handling deduplication of requests to data endpoints and caching of results. Entities and events are cached by id, to avoid repeated requesting and caching.
 
 ### Loading and fetching data
-- **Typed API client** providing data fetching functions (towards the backend = InTaVia JSON API) and defining types of query parameters and types of the response shape (InTaVia JSON data model). The client also provides a zod validation schema to validate responses.
-
-- Keyword search and list view of search results: [https://intavia.acdh-dev.oeaw.ac.at/search](https://intavia.acdh-dev.oeaw.ac.at/search)
-- visual querying: A workspace to visually query for persons based on attribute constraints including name and date of birth and death: [https://intavia.acdh-dev.oeaw.ac.at/visual-querying](https://intavia.acdh-dev.oeaw.ac.at/visual-querying)
-
+- **Typed API client** providing data fetching functions (towards the backend = InTaVia JSON API) and defining types of query parameters and types of the response shape (InTaVia JSON data model). The client also provides a zod validation schema to validate responses. The api-client is managed in a seperate [github repository](https://github.com/InTaVia/api-client) and is provided as [npm package](https://www.npmjs.com/package/@intavia/api-client).
+- `update`: **Text-based queries** and list view of search results: [https://intavia.acdh-dev.oeaw.ac.at/search](https://intavia.acdh-dev.oeaw.ac.at/search)
+- `update`: **Visual queries**: A workspace to visually query for persons based on attribute constraints including name and date of birth and death: [https://intavia.acdh-dev.oeaw.ac.at/visual-querying](https://intavia.acdh-dev.oeaw.ac.at/visual-querying)
 - **Custom react hooks** fetch missing data on demand when required by ui components depicting the data in some form (i.e., data panel, visualizations, detail view).
-
-- local data import
+- **Local data import** The data import is managed in a seperate [github repository](https://github.com/InTaVia/data-import) and is provided as [npm package](https://www.npmjs.com/package/@intavia/data-import).
 
 ### Data curation/editing
 - Basic editing capability of person entities (name, description, event types & dates) - click edit on the detail view page.
