@@ -58,22 +58,25 @@ The current prototype is available online: [https://intavia.acdh-dev.oeaw.ac.at/
 
 *Data:* The connection between the backend and the frontend is now established replacing the initially used mock data. As additional data source, users can import their own local data into the application using a excel template.
 
-The prototype implements functionalities used across the three top-level components (Data Curation Lab, DCL; Visual Analytics Studio, VA studio; Story Creator SC) in a single application. The functionalities implemented are:
+The prototype implements functionalities used across the three top-level components (Data Curation Lab, DCL; Visual Analytics Studio, VAS; Story Creator, SC) in a single application. The functionalities implemented are:
 
-### Global State
-- Shared global Redux store that can be accessed by all components 
+#### State managment and normalized entity cache
+- **Shared Redux store** managing global sate that can be consumed by all components. For example, visualizations created in the VAS can be reused in the SC because visualizations are put into the global state.
+- **Shared frontend network module** using RTKQuery handling deduplication of requests to data endpoints and caching of results. Entities and events are cached by id, to avoid repeated requesting and caching.
 
-### Data model
-- API client
-- Shared frontend network module using RTKQuery (handles deduplication of requests to data endpoints and caching of results)
+### Loading and fetching data
+- **Typed API client** providing data fetching functions (towards the backend = InTaVia JSON API) and defining types of query parameters and types of the response shape (InTaVia JSON data model).
 
-### Data aquisition
 - Keyword search and list view of search results: [https://intavia.acdh-dev.oeaw.ac.at/search](https://intavia.acdh-dev.oeaw.ac.at/search)
 - visual querying: A workspace to visually query for persons based on attribute constraints including name and date of birth and death: [https://intavia.acdh-dev.oeaw.ac.at/visual-querying](https://intavia.acdh-dev.oeaw.ac.at/visual-querying)
+
+- **Custom react hooks** fetch missing data on demand when required by ui components depicting the data in some form (i.e., data panel, visualizations, detail view).
+
 - local data import
 
 ### data curation/editing
 - Basic editing capability of person entities (name, description, event types & dates) - click edit on the detail view page.
+- Collections
 
 ### Data views:
 - Detail view of entities: e.g., [https://intavia.acdh-dev.oeaw.ac.at/person/876859d3-dee8-468d-9c61-a29e97ef478a](https://intavia.acdh-dev.oeaw.ac.at/person/876859d3-dee8-468d-9c61-a29e97ef478a)
