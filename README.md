@@ -58,14 +58,14 @@ The current prototype is available online: [https://intavia.acdh-dev.oeaw.ac.at/
 
 *Data:* The connection between the backend and the frontend is now established replacing the initially used mock data. As additional data source, users can import their own local data into the application using a excel template.
 
-The prototype implements functionalities used across the three top-level components (Data Curation Lab (DCL), isual Analytics Studio (VAS), and Storytelling Suite (STS) = Story Creator (SC) + Story Viewer (SV)) in a single application. The functionalities implemented are:
+The prototype implements functionalities used across the three top-level components (Data Curation Lab (DCL), isual Analytics Studio (VAS), and Storytelling Suite (STS) = Story Creator (SC) + Story Viewer (SV)) in a single application (except the SV, which is a seperate application). The functionalities implemented are:
 
 ### State managment and normalized entity cache
 - **Shared Redux store** managing global sate that can be consumed by all components. For example, visualizations created in the VAS can be reused in the SC because visualizations are put into the global state.
 - **Shared frontend network module** using RTKQuery handling deduplication of requests to data endpoints and caching of results. Entities and events are cached by id, to avoid repeated requesting and caching.
 
 ### Loading and fetching data
-- **Typed API client** providing data fetching functions (towards the backend = InTaVia JSON API) and defining types of query parameters and types of the response shape (InTaVia JSON data model).
+- **Typed API client** providing data fetching functions (towards the backend = InTaVia JSON API) and defining types of query parameters and types of the response shape (InTaVia JSON data model). The client also provides a zod validation schema to validate responses.
 
 - Keyword search and list view of search results: [https://intavia.acdh-dev.oeaw.ac.at/search](https://intavia.acdh-dev.oeaw.ac.at/search)
 - visual querying: A workspace to visually query for persons based on attribute constraints including name and date of birth and death: [https://intavia.acdh-dev.oeaw.ac.at/visual-querying](https://intavia.acdh-dev.oeaw.ac.at/visual-querying)
