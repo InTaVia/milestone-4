@@ -58,9 +58,9 @@ The current prototype is available online: [https://intavia.acdh-dev.oeaw.ac.at/
 
 *Data:* The connection between the backend and the frontend is now established replacing the initially used mock data. As additional data source, users can import their own local data into the application using a excel template.
 
-The prototype implements functionalities used across the three top-level components (Data Curation Lab, DCL; Visual Analytics Studio, VAS; Story Creator, SC) in a single application. The functionalities implemented are:
+The prototype implements functionalities used across the three top-level components (Data Curation Lab (DCL), isual Analytics Studio (VAS), and Storytelling Suite (STS) = Story Creator (SC) + Story Viewer (SV)) in a single application. The functionalities implemented are:
 
-#### State managment and normalized entity cache
+### State managment and normalized entity cache
 - **Shared Redux store** managing global sate that can be consumed by all components. For example, visualizations created in the VAS can be reused in the SC because visualizations are put into the global state.
 - **Shared frontend network module** using RTKQuery handling deduplication of requests to data endpoints and caching of results. Entities and events are cached by id, to avoid repeated requesting and caching.
 
@@ -74,7 +74,7 @@ The prototype implements functionalities used across the three top-level compone
 
 - local data import
 
-### data curation/editing
+### Data curation/editing
 - Basic editing capability of person entities (name, description, event types & dates) - click edit on the detail view page.
 - Collections
 
@@ -87,35 +87,26 @@ The prototype implements functionalities used across the three top-level compone
 - Timeline view showing a set of person entities with selected life events (e.g. birth, death, lived): [https://intavia.acdh-dev.oeaw.ac.at/timeline](https://intavia.acdh-dev.oeaw.ac.at/timeline)
 - A geographic map view showing localized life events (i.e. birth and death) connected with a line: [https://intavia.acdh-dev.oeaw.ac.at/geomap](https://intavia.acdh-dev.oeaw.ac.at/geomap)
 - ego Network
-- Statistical
+- Statistical views (histogram)
 
-### Layouts and Coordinated views:
+### Layouts and coordinated views
 - workspaces
 - Multiple views integrated on a single page are shown here: [https://intavia.acdh-dev.oeaw.ac.at/coordination](https://intavia.acdh-dev.oeaw.ac.at/coordination)
 - The example coordinates an entity list view, a timeline and a map showing persons and their life events via mouseover highlighting (red colour).
 - Currently, applies only to the map, a dropdown menu allows to filter the depicted events. If more than one event type is selected, the localized events are connected with lines in chronological order.
 - slides
 
-### Story Creator
+### Story generation
 
-- story script posting
-
-
-### Story Viewer
-- post endpoint
-
-### Storytelling Suite = Story Creator + Story Viewer
 
 - The ST creator implements an interactive user interface allowing to generate and import slide-based stories. The prototype can depict persons’ life-events on a map and provides annotation capabilities (i.e., images and text): [https://intavia.acdh-dev.oeaw.ac.at/storycreator](https://intavia.acdh-dev.oeaw.ac.at/storycreator) 
     - Stories Overview (create and delete stories, edit story settings)
     - Story Flow (create, layout and delete slides per drag and drop)
     - Slide Editor (create, edit, layout and delete map, images and text per drag and drop)
     - Text Mode (edit or upload the whole story via textarea) (accessible through the clipboard icon in the top right corner)
+- story script posting
 
-- The single event slides for the **"Life of Paolo Vergerio"** can be imported through the text editor using the content of json this [file](https://drive.google.com/file/d/1SSqNUxFXwucLqy2qHig4TAgyPweHNRJd/view?usp=sharing).
-
+### Story viewing
 - An example of a story created using the Story Creator is available online: 
 [ST Viewer Example](https://intavia.fluxguide.com/fluxguide/public/content/fluxguide/exhibitions/1/system/app/dist/index.html)
-    - The example shows 4 Slides of the **"Albrecht Dürer's trip to the Netherlands"** created with the **Story Creator** based on a map visualizatrion featuring annotations and images.
-    
-    https://intavia.fluxguide.com/fluxguide/public/content/fluxguide/exhibitions/1/system/app/dist/index.html
+    - The example shows 4 Slides of the **"Albrecht Dürer's trip to the Netherlands"** created with the **Story Creator** based on a map visualization featuring annotations and images.
