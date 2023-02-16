@@ -111,15 +111,13 @@ The prototype implements functionalities used across the three top-level compone
 
 ### Story creation
 
-
-- The ST creator implements an interactive user interface allowing to generate and import slide-based stories. The prototype can depict persons’ life-events on a map and provides annotation capabilities (i.e., images and text): [https://intavia.acdh-dev.oeaw.ac.at/storycreator](https://intavia.acdh-dev.oeaw.ac.at/storycreator) 
+- The ST creator implements an interactive user interface allowing to generate and slide-based stories. The prototype can depict entities and their events on maps and timelines and provides  (i.e., images, text, quizzes): [https://intavia.acdh-dev.oeaw.ac.at/storycreator](https://intavia.acdh-dev.oeaw.ac.at/storycreator) 
     - Stories Overview (create and delete stories, edit story settings)
-    - Story Flow (create, layout and delete slides per drag and drop)
-    - Slide Editor (create, edit, layout and delete map, images and text per drag and drop)
-    - Text Mode (edit or upload the whole story via textarea) (accessible through the clipboard icon in the top right corner)
-- story script posting
+    - Story Flow (create, duplicate, delete, and order slides per drag and drop)
+    - Slide Editor (create, edit, select-annotate, layout and delete visualizatiions as well as narrative content including text, images, and quizzes)
+    - Story script export (to the SV)
 
 ### Story viewing
 - An example of a story created using the Story Creator is available online: 
-[ST Viewer Example](https://intavia.fluxguide.com/fluxguide/public/content/fluxguide/exhibitions/1/system/app/dist/index.html)
+[Story Viewer Example](https://intavia.fluxguide.com/fluxguide/public/content/fluxguide/exhibitions/1/system/app/dist/index.html)
     - The example shows 4 Slides of the **"Albrecht Dürer's trip to the Netherlands"** created with the **Story Creator** based on a map visualization featuring annotations and images.
