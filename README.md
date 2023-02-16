@@ -82,29 +82,28 @@ The prototype implements functionalities used across the three top-level compone
 
 ### Loading and fetching data
 - **Typed API client** providing data fetching functions (towards the backend = InTaVia JSON API) and defining types of query parameters and types of the response shape (InTaVia JSON data model). The client also provides a zod validation schema to validate responses. The api-client is managed in a seperate [github repository](https://github.com/InTaVia/api-client) and is provided as [npm package](https://www.npmjs.com/package/@intavia/api-client).
-- `update`: **Text-based queries** and list view of search results: [https://intavia.acdh-dev.oeaw.ac.at/search](https://intavia.acdh-dev.oeaw.ac.at/search)
-- `update`: **Visual queries**: A workspace to visually query for persons based on attribute constraints including name and date of birth and death: [https://intavia.acdh-dev.oeaw.ac.at/visual-querying](https://intavia.acdh-dev.oeaw.ac.at/visual-querying)
+**Text-based queries** on entiy labels and list view of search results in the DCL.
+**Visual queries** are a visual way to formulate a search for person entities based on attribute constraints including name, date of birth, date of death, and occupation.
 - **Custom react hooks** fetch missing data on demand when required by ui components depicting the data in some form (i.e., data panel, visualizations, detail view).
-- **Local data import** The data import is managed in a seperate [github repository](https://github.com/InTaVia/data-import) and is provided as [npm package](https://www.npmjs.com/package/@intavia/data-import).
+- **Local data import** provides functions to load data from an Excel document (e.g., data about [Albrecht Dürer](https://github.com/InTaVia/data-import/raw/main/public/data/data-duerer.xlsx)) with a predifined strucutre replicating in large parts the frontend data model.The data import is managed in a seperate [github repository](https://github.com/InTaVia/data-import) and is provided as [npm package](https://www.npmjs.com/package/@intavia/data-import).
 
 ### Data curation/editing
-- Basic ***editing capability of entities (name, description, event types & dates) - click edit on the detail view page.
-- Collections
+- **Collections** allow users to group entities and events by any topic of interest. Collections are created in the DCL and can then be used in the VAS and the SC to access stored data and visualize them with the help of the data panel. 
 
-### Data views:
-- ***Entity details:*** `udpate`
-- ***Data panel:*** `update`
+### Data views
+- **Entity details** are shown on an entities detail view, listing attributes and events as well as displaying a ego-network visualization of the selected entity.
+- **Data panel** provides a text or list-based view onto the data. The data panel is used in the VAS and the SC as a link to the redux data cache (i.e., collections and the respective events and entities). Users can interacively add data listed to visualizations.
 
 ### Visualizations
-- ***Timeline*** view showing a set of person entities with selected life events (e.g. birth, death, lived): [https://intavia.acdh-dev.oeaw.ac.at/timeline](https://intavia.acdh-dev.oeaw.ac.at/timeline)
-- A geographic map view showing localized life events (i.e. birth and death) connected with a line: [https://intavia.acdh-dev.oeaw.ac.at/geomap](https://intavia.acdh-dev.oeaw.ac.at/geomap)
-- ***Ego-Network:*** `update`
-- ***Statistical views***: histogram  `update`
-- ***Visualization wizard:*** `update`
+- **Timeline** view showing a set of person entities with selected life events (e.g. birth, death, lived): [https://intavia.acdh-dev.oeaw.ac.at/timeline](https://intavia.acdh-dev.oeaw.ac.at/timeline)
+- **Geographic map** view showing localized life events (i.e. birth and death) connected with a line: [https://intavia.acdh-dev.oeaw.ac.at/geomap](https://intavia.acdh-dev.oeaw.ac.at/geomap)
+- **Ego-Network** is currently used on 
+- **Statistical views** histogram  `update`
+- **Visualization wizard** `update`
 
 ### Layouts and coordinated views
-- ***Workspaces*** in the VAS can have several predefined layouts containing up to four visualizations implementing multiple views
-- ***Slides** in the SC can have have several predefined layouts containing visualizations and narrative content
+- **Workspaces** in the VAS can have several predefined layouts containing up to four visualizations implementing multiple views
+- **Slides** in the SC can have have several predefined layouts containing visualizations and narrative content
 - Multiple views integrated on a single page are shown here: [https://intavia.acdh-dev.oeaw.ac.at/coordination](https://intavia.acdh-dev.oeaw.ac.at/coordination)
 - The example coordinates an entity list view, a timeline and a map showing persons and their life events via mouseover highlighting (red colour).
 - Currently, applies only to the map, a dropdown menu allows to filter the depicted events. If more than one event type is selected, the localized events are connected with lines in chronological order.
