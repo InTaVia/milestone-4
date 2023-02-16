@@ -8,38 +8,54 @@ System fully integrated, all main functionality implemented ready for testing by
 
 ## Backend (WP2 & 3)
 
-### Datamodel InTaVia IDM-RDF
+### Data model InTaVia IDM-RDF
 
-The repository https://github.com/InTaVia/idm-rdf contains the [IDM-RDF](https://raw.githubusercontent.com/InTaVia/idm-rdf/main/idm-OWL/intavia_idm1.owl) at its current state (including ongoing discussions in the issues).
+The repository https://github.com/InTaVia/idm-rdf contains the [IDM-RDF](https://github.com/InTaVia/idm-rdf/blob/main/idm-OWL/intavia_idm1.1.owl) at its current state (including ongoing discussions in the issues).
 
 ### Ingestion workflows / source datasets
 
 The repository https://github.com/InTaVia/source-dataset-conversion contains the conversion scripts and the datasets in the IDM data model at their current state for the following prosopographical source datasets:
 
-- [Finland](https://raw.githubusercontent.com/InTaVia/source-dataset-conversion/main/BS_dataset/bs2intavia.ttl) (Aalto / UH)
-- [Austria](https://raw.githubusercontent.com/InTaVia/source-dataset-conversion/main/APIS_dataset/apisdata_18-04-2022_edited.ttl) (OeAW)
-- Netherlands [Part1](https://raw.githubusercontent.com/InTaVia/source-dataset-conversion/main/intavia_biographynet/data/rdf/xaa.zip), [Part2](https://raw.githubusercontent.com/InTaVia/source-dataset-conversion/main/intavia_biographynet/data/rdf/xab.zip), [Part3](https://raw.githubusercontent.com/InTaVia/source-dataset-conversion/main/intavia_biographynet/data/rdf/xab.zip) (zipped in three parts for size) (VU)
+- [Finland](https://github.com/InTaVia/source-dataset-conversion/blob/main/BS_dataset/bs2intavia.ttl) (Aalto / UH)
+- [Austria](https://github.com/InTaVia/source-dataset-conversion/blob/main/APIS_dataset/apis_oebl_serialization_2-9-2022.ttl) (OeAW)
+- Netherlands [Part1](https://github.com/InTaVia/source-dataset-conversion/blob/main/intavia_biographynet/data/rdf/xaa.zip), [Part2](https://github.com/InTaVia/source-dataset-conversion/blob/main/intavia_biographynet/data/rdf/xab.zip), [Part3](https://github.com/InTaVia/source-dataset-conversion/blob/main/intavia_biographynet/data/rdf/xac.zip) (zipped in three parts for size) (VU)
+- Slovenia [example subset](https://github.com/InTaVia/source-dataset-conversion/blob/main/SBI_dataset/sbi.ttl)
+
+### Triplestore
+
+The datasets are stored in a [Blazegraph](https://blazegraph.com/) triplestore, hosted at the ACDH-CH. Blazegraph provides a SPARQL endpoint for accessing the data.
 
 ### JSON API
 
-The repository https://github.com/InTaVia/grlc contains the grlc software, that is used for providing the JSON API, at its current state.
+The repository https://github.com/InTaVia/InTaVia-Backend contains an [OpenAPI](https://swagger.io/specification/) compliant [FastAPI](https://fastapi.tiangolo.com/)-based REST JSON API definitions and implementation for accessing the data in the InTaVia triplestore, at its current state.
 
-The repository https://github.com/InTaVia/grlc_sparql contains the JSON API definitions at their current state, namely the following APIs:
+Namely The following APIs are provided:
 
-* Generic entity search
-* Person history
+* Query Entities
+* Retrieve Entity
+* several vocabularies endpoints
+* several statistics endpoints
+* Reconciliation Service (implementing the [Reconciliation Service API
+](https://reconciliation-api.github.io/specs/))
 
-The test version of the API is available under https://grlc.acdh-dev.oeaw.ac.at/api/InTaVia/grlc_sparql#/
+The test version of the API is available under https://intavia-backend.acdh-dev.oeaw.ac.at/v1/
 
+### ResearchSpace for internal usage
 
-### Researchspace for internal usage
-
-In addition to the resources mentioned above we set up a [researchspace instance](https://mp-playground.acdh-dev.oeaw.ac.at/) that is meant for internal work on and exploration of the knowledge graph. This service is currently for internal use only.
+In addition to the resources mentioned above we set up a [ResearchSpace instance](https://mp-playground.acdh-dev.oeaw.ac.at/) that is meant for internal work on and exploration of the knowledge graph. This service is currently for internal use only.
 
 ### Prefect workflow component
 
-We deployed prefect within the ACDH-CH kubernetes cluster to run conversion, enrichment and ingestion scripts on the cluster. Given that the open-source version of this software solution doesnt come with authentication built in, this component is currently only reachable from within ACDH-CH subnet. Given some delay in our original planning the scripts are currently still executed locally instead of running within prefect. 
+We deployed [Prefect](https://www.prefect.io/) within the  kubernetes cluster to run conversion, enrichment and ingestion scripts on the cluster. Given that the open-source version of this software solution doesnt come with authentication built in, this component is currently only reachable from within ACDH-CH subnet. Given some delay in our original planning the scripts are currently still executed locally instead of running within prefect.
 
+The repository https://github.com/InTaVia/prefect-flows contains implementations for the the following workflows:
+
+* Ingest data
+* Entity ID linker
+* Reconcile person instances
+* Inference
+* Enrich CHO data
+* Convert GeoSpatial coordinates
 
 ## WP4
 
