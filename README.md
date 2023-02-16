@@ -88,22 +88,23 @@ The prototype implements functionalities used across the three top-level compone
 - **Local data import** The data import is managed in a seperate [github repository](https://github.com/InTaVia/data-import) and is provided as [npm package](https://www.npmjs.com/package/@intavia/data-import).
 
 ### Data curation/editing
-- Basic editing capability of person entities (name, description, event types & dates) - click edit on the detail view page.
+- Basic ***editing capability of entities (name, description, event types & dates) - click edit on the detail view page.
 - Collections
 
 ### Data views:
-- Detail view of entities: e.g., [https://intavia.acdh-dev.oeaw.ac.at/person/876859d3-dee8-468d-9c61-a29e97ef478a](https://intavia.acdh-dev.oeaw.ac.at/person/876859d3-dee8-468d-9c61-a29e97ef478a)
-- detail view
-- Data Panel
+- ***Entity details:*** `udpate`
+- ***Data panel:*** `update`
 
 ### Visualizations
-- Timeline view showing a set of person entities with selected life events (e.g. birth, death, lived): [https://intavia.acdh-dev.oeaw.ac.at/timeline](https://intavia.acdh-dev.oeaw.ac.at/timeline)
+- ***Timeline*** view showing a set of person entities with selected life events (e.g. birth, death, lived): [https://intavia.acdh-dev.oeaw.ac.at/timeline](https://intavia.acdh-dev.oeaw.ac.at/timeline)
 - A geographic map view showing localized life events (i.e. birth and death) connected with a line: [https://intavia.acdh-dev.oeaw.ac.at/geomap](https://intavia.acdh-dev.oeaw.ac.at/geomap)
-- ego Network
-- Statistical views (histogram)
+- ***Ego-Network:*** `update`
+- ***Statistical views***: histogram  `update`
+- ***Visualization wizard:*** `update`
 
 ### Layouts and coordinated views
-- workspaces
+- ***Workspaces*** in the VAS can have several predefined layouts containing up to four visualizations implementing multiple views
+- ***Slides** in the SC can have have several predefined layouts containing visualizations and narrative content
 - Multiple views integrated on a single page are shown here: [https://intavia.acdh-dev.oeaw.ac.at/coordination](https://intavia.acdh-dev.oeaw.ac.at/coordination)
 - The example coordinates an entity list view, a timeline and a map showing persons and their life events via mouseover highlighting (red colour).
 - Currently, applies only to the map, a dropdown menu allows to filter the depicted events. If more than one event type is selected, the localized events are connected with lines in chronological order.
