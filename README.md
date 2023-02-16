@@ -19,7 +19,7 @@ The repository https://github.com/InTaVia/source-dataset-conversion contains the
 - [Finland](https://github.com/InTaVia/source-dataset-conversion/blob/main/BS_dataset/bs2intavia.ttl) (Aalto / UH)
 - [Austria](https://github.com/InTaVia/source-dataset-conversion/blob/main/APIS_dataset/apis_oebl_serialization_2-9-2022.ttl) (OeAW)
 - Netherlands [Part1](https://github.com/InTaVia/source-dataset-conversion/blob/main/intavia_biographynet/data/rdf/xaa.zip), [Part2](https://github.com/InTaVia/source-dataset-conversion/blob/main/intavia_biographynet/data/rdf/xab.zip), [Part3](https://github.com/InTaVia/source-dataset-conversion/blob/main/intavia_biographynet/data/rdf/xac.zip) (zipped in three parts for size) (VU)
-- Slovenia [example subset](https://github.com/InTaVia/source-dataset-conversion/blob/main/SBI_dataset/sbi.ttl)
+- Slovenia [example subset](https://github.com/InTaVia/source-dataset-conversion/blob/main/SBI_dataset/sbi.ttl) (ZRC SAZU)
 
 ### Triplestore
 
