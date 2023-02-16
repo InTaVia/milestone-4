@@ -93,7 +93,7 @@ The prototype implements functionalities used across the three top-level compone
 - Currently, applies only to the map, a dropdown menu allows to filter the depicted events. If more than one event type is selected, the localized events are connected with lines in chronological order.
 - slides
 
-### Story generation
+### Story creation
 
 
 - The ST creator implements an interactive user interface allowing to generate and import slide-based stories. The prototype can depict persons’ life-events on a map and provides annotation capabilities (i.e., images and text): [https://intavia.acdh-dev.oeaw.ac.at/storycreator](https://intavia.acdh-dev.oeaw.ac.at/storycreator) 
