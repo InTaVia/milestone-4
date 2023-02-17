@@ -82,8 +82,8 @@ The prototype implements functionalities used across the three top-level compone
 
 ### Loading and fetching data
 - **Typed API client** providing data fetching functions (towards the backend = InTaVia JSON API) and defining types of query parameters and types of the response shape (InTaVia JSON data model). The client also provides a zod validation schema to validate responses. The api-client is managed in a seperate [github repository](https://github.com/InTaVia/api-client) and is provided as [npm package](https://www.npmjs.com/package/@intavia/api-client).
-**Text-based queries** on entiy labels and list view of search results in the DCL.
-**Visual queries** are a visual way to formulate a search for person entities based on attribute constraints including name, date of birth, date of death, and occupation.
+- **Text-based queries** on entiy labels and list view of search results in the DCL.
+- **Visual queries** are a visual way to formulate a search for person entities based on attribute constraints including name, date of birth, date of death, and occupation.
 - **Custom react hooks** fetch missing data on demand when required by ui components depicting the data in some form (i.e., data panel, visualizations, detail view).
 - **Local data import** provides functions to load data from an Excel document (e.g., data about [Albrecht Dürer](https://github.com/InTaVia/data-import/raw/main/public/data/data-duerer.xlsx)) with a predifined strucutre replicating in large parts the frontend data model.The data import is managed in a seperate [github repository](https://github.com/InTaVia/data-import) and is provided as [npm package](https://www.npmjs.com/package/@intavia/data-import).
 
