@@ -104,10 +104,6 @@ The prototype implements functionalities used across the three top-level compone
 ### Layouts and coordinated views
 - **Workspaces** in the VAS can have several predefined layouts containing up to four visualizations implementing multiple views
 - **Slides** in the SC can have have several predefined layouts containing visualizations and narrative content
-- Multiple views integrated on a single page are shown here: [https://intavia.acdh-dev.oeaw.ac.at/coordination](https://intavia.acdh-dev.oeaw.ac.at/coordination)
-- The example coordinates an entity list view, a timeline and a map showing persons and their life events via mouseover highlighting (red colour).
-- Currently, applies only to the map, a dropdown menu allows to filter the depicted events. If more than one event type is selected, the localized events are connected with lines in chronological order.
-- slides
 
 ### Story creation
 
