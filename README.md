@@ -95,11 +95,11 @@ The prototype implements functionalities used across the three top-level compone
 - **Data panel** provides a text or list-based view onto the data. The data panel is used in the VAS and the SC as a link to the redux data cache (i.e., collections and the respective events and entities). Users can interacively add data listed to visualizations.
 
 ### Visualizations
-- **Timeline** view showing a set of person entities with selected life events (e.g. birth, death, lived): [https://intavia.acdh-dev.oeaw.ac.at/timeline](https://intavia.acdh-dev.oeaw.ac.at/timeline)
-- **Geographic map** view showing localized life events (i.e. birth and death) connected with a line: [https://intavia.acdh-dev.oeaw.ac.at/geomap](https://intavia.acdh-dev.oeaw.ac.at/geomap)
-- **Ego-Network** is currently used on 
-- **Statistical views** histogram  `update`
-- **Visualization wizard** `update`
+- **Timeline** view implements a component that visually adapts to the number of displayed entities and events and the available display space. To avoid overplotting several aggregation modes were developed.
+- **Geographic map** view implements map layers that (1) are plotting simple markers at a given event location, (2) cluster proximal data points in a visually aggregated form, and (3) connect event locations chronologically with trajectories/lines.
+- **Ego-Network** is currently used on the entity detail screen, showing related entities of the selected focus entity.
+- **Statistical views** are currently used in the visual querying tool (i.e., historgram)
+- **Visualization wizard** is shown in empty layout panels in the VAS and SC and allows to add new visualizations or load already existing visualizations into the respective panel.
 
 ### Layouts and coordinated views
 - **Workspaces** in the VAS can have several predefined layouts containing up to four visualizations implementing multiple views
